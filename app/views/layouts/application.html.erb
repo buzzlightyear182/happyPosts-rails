@@ -13,19 +13,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app='happyPosts'>
-  <!-- <div class="container"> -->
+  <div class="container">
     <div class='row'>
       <div class='col-md-6 col-md-offset-3'>
+        <div ng-include="'nav/_nav.html'"></div>
         <ui-view></ui-view>
       </div>
     </div>
-  <!-- </div> -->
+  </div>
 
   <footer class="footer">
     <div class="container">
       <p style='text-align:center;'>
-        Made by: <a href='http://www.janeheatherdee.com' style='margin-right:20px;'>buzzlightyear182</a>
-        <span class="glyphicon glyphicon-star" style='margin-right:20px;' aria-hidden="true"></span>
+        Made by: <a href='http://www.janeheatherdee.com' style='margin-right:10px;'>buzzlightyear182</a>
+        <span class="glyphicon glyphicon-star" style='margin-right:10px;' aria-hidden="true"></span>
         <a style='text-align:left;' href='http://github.com/buzzlightyear182/happyPosts-rails'>Check me out on Github</a>
       </p>
     </div>
