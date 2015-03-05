@@ -4,6 +4,6 @@
     <li ng-hide='signedIn()'><a href='#/login'>Log in</a></li>
     <li ng-hide='signedIn()'><a href='#/register'>Register</a></li>
     <li ng-show='signedIn()'><a href='#/'>Welcome, {{user.username}}</a></li>
-    <li ng-show='signedIn()'><a ng-click='logOut()'>Log out</a></li>
+    <li ng-show='signedIn()'><a ng-click='logout()'>Log out</a></li>
   </ul>
 </nav>
