@@ -31,3 +31,5 @@ gem 'spring',      group: :development
 
 gem 'angular-rails-templates'
 gem 'angular_rails_csrf'
+
+gem 'rails_12factor'
