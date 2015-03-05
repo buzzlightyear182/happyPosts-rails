@@ -21,6 +21,13 @@ app.factory('posts', function($http){
     });
   };
 
+  // Retrieves a single post from our server
+  p.get = function(id){
+    return $http.get('/posts/' + id).then(function(res){
+      return res.data;
+    });
+  };
+
   return p;
 
 });

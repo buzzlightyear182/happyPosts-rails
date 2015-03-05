@@ -1,5 +1,9 @@
 var app = angular.module('happyPosts');
 
+app.config(function($httpProvider) {
+  $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+});
+
 app.config(function($stateProvider, $urlRouterProvider){
 
     $stateProvider.state('home', {
@@ -16,7 +20,13 @@ app.config(function($stateProvider, $urlRouterProvider){
     $stateProvider.state('posts', {
       url: '/posts/{id}',
       templateUrl: 'posts/_posts.html',
-      controller: 'postsCtrl'
+      controller: 'postsCtrl',
+      resolve: {
+        post: ['$stateParams', 'posts', function($stateParams, posts) {
+          return posts.get($stateParams.id);
+        }]
+      }
+      // Resolve: Angular ui-router detects we are entering the posts state and will then automatically query the server for the full post object, including comments. Only after the request has returned will the state finish loading.
     });
 
     $urlRouterProvider.otherwise('home');

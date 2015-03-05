@@ -1,7 +1,7 @@
 var app = angular.module('happyPosts');
 
-app.controller('postsCtrl', function($scope,$stateParams,posts){
-  $scope.post = posts.posts[$stateParams.id];
+app.controller('postsCtrl', function($scope, post){
+  $scope.post = post;
 
   $scope.addComment = function(){
     if($scope.body === ''){
