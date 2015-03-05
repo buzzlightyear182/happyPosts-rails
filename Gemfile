@@ -33,3 +33,4 @@ gem 'angular-rails-templates'
 gem 'angular_rails_csrf'
 
 gem 'rails_12factor', group: :production
+gem 'devise'
