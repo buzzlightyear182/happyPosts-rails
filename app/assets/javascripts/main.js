@@ -26,7 +26,7 @@ app.config(function($stateProvider, $urlRouterProvider){
           return posts.get($stateParams.id);
         }]
       }
-      // Resolve: Angular ui-router detects we are entering the posts state and will then automatically query the server for the full post object, including comments. Only after the request has returned will the state finish loading.
+      // resolve: Angular ui-router detects we are entering the posts state and will then automatically query the server for the full post object, including comments. Only after the request has returned will the state finish loading.
     });
 
     $urlRouterProvider.otherwise('home');

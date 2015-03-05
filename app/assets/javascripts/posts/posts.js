@@ -28,6 +28,16 @@ app.factory('posts', function($http){
     });
   };
 
+  p.addComment = function(id, comment){
+    return $http.post('/posts/' + id + '/comments.json', comment);
+  };
+
+  p.upvoteComment = function(post, comment){
+    return $http.put('/posts/' + post.id + '/comments/' + comment.id + '/upvote.json').success(function(data){
+      comment.upvotes += 1;
+    });
+  };
+
   return p;
 
 });
