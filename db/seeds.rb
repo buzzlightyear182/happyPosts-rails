@@ -1,7 +1,1 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# Post.create([{title: '24 Hours of Happy', link: 'http://24hoursofhappy.com/', description: "Pharell's music video" , upvotes: 0}, {title: '100happydays', link: 'http://100happydays.com/', description: 'Challenge yourself to 100 days of happiness', upvotes: 0}, {title: 'What is Happiness?', link:'http://us.coca-cola.com/happiness/', description: 'Happiness from Coca-cola', upvotes: 0}, {title: '7 Essential Books on the Art and Science of Happiness', link: 'http://www.brainpickings.org/2011/01/25/must-read-books-happiness/', description: 'Brainpickings.org choices', upvotes: 0},{title: '12 Secrets of Being Happy', link: 'http://www.dailymail.co.uk/femail/article-2090271/12-secrets-happy-Using-research-100-world-experts-new-book-shows-look-bright-side.html', description: 'From the dailymail.co.uk - Using research from 100 world experts, a new book shows how to look on the bright side', upvotes: 0}]);
