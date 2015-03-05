@@ -10,8 +10,8 @@
     <div class="panel-body">
       {{comment.body}}
     </div>
-    <div class="panel-footer">
-      <span style='margin-right: 10px;'>Author: {{comment.author}}</span>
+    <div class="panel-footer small">
+      <span style='margin-right: 10px;'>Author: {{comment.user.username}}</span>
       <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(comment)"></span>
       <span style='margin-left: 3px;'>{{comment.upvotes}}</span>
     </div>
