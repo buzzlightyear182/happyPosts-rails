@@ -3,7 +3,7 @@
 
 [Check it out here](https://happy-posts.herokuapp.com/)
 
-[![screenshot](https://github.com/buzzlightyear182/happyPosts/blob/master/screenshot.png)](https://happy-posts.herokuapp.com/)
+[![screenshot](https://github.com/buzzlightyear182/happyPosts-rails/blob/master/screenshot.png)](https://happy-posts.herokuapp.com/)
 
 -------------------
 ####Basic functions:
