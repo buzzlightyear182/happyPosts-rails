@@ -9,6 +9,12 @@ app.factory('posts', function($http){
     });
   };
 
+  p.create = function(post){
+    return $http.post('/posts.json', post).success(function(data){
+      p.posts.push(data);
+    });
+  };
+
   return p;
 
 });

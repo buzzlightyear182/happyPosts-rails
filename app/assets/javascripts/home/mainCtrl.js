@@ -9,16 +9,14 @@ app.controller('mainCtrl', function($scope, posts){
     if(!$scope.title || $scope.title === ''){
       return;
     }
-    $scope.posts.push({
+
+    posts.create({
       title: $scope.title,
       link: $scope.link,
       description: $scope.description,
-      upvotes: 0,
-      comments: [
-        // {author: 'test01', body: 'this is a fake comment 01', upvotes: 0},
-        // {author: 'test02', body: 'this is a fake comment 02', upvotes: 0}
-      ]
-    });
+      upvotes: 0
+    })
+
     $scope.title='';
     $scope.link='';
     $scope.description = '';
