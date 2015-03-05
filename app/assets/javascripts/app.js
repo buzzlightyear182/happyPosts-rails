@@ -1,10 +1,10 @@
-var app = angular.module('happyPosts');
+var app = angular.module('happyPosts',['ui.router', 'templates']);
 
-app.config(function($httpProvider) {
+app.config(['$httpProvider', function($httpProvider) {
   $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
-});
+}]);
 
-app.config(function($stateProvider, $urlRouterProvider){
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 
     $stateProvider.state('home', {
       url: '/home',
@@ -30,4 +30,4 @@ app.config(function($stateProvider, $urlRouterProvider){
     });
 
     $urlRouterProvider.otherwise('home');
-});
+}]);

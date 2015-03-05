@@ -1,6 +1,6 @@
 var app = angular.module('happyPosts');
 
-app.factory('posts', function($http){
+app.factory('posts', ['$http',function($http){
   var p = {posts: []};
 
   p.getAll = function(){
@@ -40,4 +40,4 @@ app.factory('posts', function($http){
 
   return p;
 
-});
+}]);

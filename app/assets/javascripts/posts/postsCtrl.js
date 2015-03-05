@@ -1,6 +1,6 @@
 var app = angular.module('happyPosts');
 
-app.controller('postsCtrl', function($scope, posts, post){
+app.controller('postsCtrl', ['$scope', 'posts', 'post', function($scope, posts, post){
   $scope.post = post;
 
   $scope.addComment = function(){
@@ -23,4 +23,4 @@ app.controller('postsCtrl', function($scope, posts, post){
     posts.upvoteComment(post, comment);
   };
 
-});
+}]);

@@ -1,6 +1,6 @@
-var app = angular.module('happyPosts',['ui.router', 'templates']);
+var app = angular.module('happyPosts');
 
-app.controller('mainCtrl', function($scope, posts){
+app.controller('mainCtrl', ['$scope', 'posts', function($scope, posts){
 
   $scope.posts = posts.posts;
 
@@ -26,4 +26,4 @@ app.controller('mainCtrl', function($scope, posts){
     posts.upvote(post);
   };
 
-});
+}]);
