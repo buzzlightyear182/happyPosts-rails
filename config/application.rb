@@ -20,5 +20,21 @@ module HappyPostsRails
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     # config.assets.initialize_on_precompile = false
+
+    config.assets.precompile.shift
+
+    # Add additional asset pathes
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'components', 'bootstrap', 'dist', 'fonts')
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
+
+    # Precompile additional asset types
+    config.assets.precompile.push(Proc.new do |path|
+      File.extname(path).in? [
+        '.html', '.erb', '.haml',                 # Templates
+        '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
+        '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
+      ]
+    end)
   end
 end
